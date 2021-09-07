@@ -1,0 +1,426 @@
+/* variables*/
+$fuente: 'Livvic', sans-serif;
+$backgroundGeneral: linear-gradient(rgba(254,243,155,1),rgba(177,221,132,1),rgba(221,201,132,1));
+$colorTitulo: darkslategray;
+$tamanioTituloDesktop: 60px;
+$tamanioTituloTablet: 50px;
+$tamanioTituloMobile: 30px;
+$colorSubtitulo: lemonchiffon;
+$tamanioSubtituloDesktop: 30px;
+$tamanioSubtituloTablet: 27px;
+$tamanioSubtituloMobile: 13px;
+$colorTexto: midnightblue;
+$tamanioTextoDesktop: 17px;
+$tamanioTextoTablet: 14px;
+$tamanioTextoMobile: 10px;
+
+
+*{margin: 0; padding: 0;}
+
+
+
+/* Para Bootstrap */
+
+.container-fluid{
+	padding-left: auto;
+	padding-right: auto;
+}
+
+.navbar-collapse{
+	justify-content: flex-end;
+}
+
+
+
+/*vista desktop*/
+
+@media only screen and (min-width: 1024px){
+
+	@keyframes moverElemento{
+		0%{width: 300px; transform: translate(100px, 160px);}
+		40%{width: 200px; transform: rotate(180deg);}
+		80%{width: 150px; transform: scale(1.2);}
+		100%{width: 126px;}
+	}
+
+	.logo{
+		animation-name: moverElemento;
+		animation-duration: 5s;
+		animation-delay: 0;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+	}
+
+	#navbarNav{
+		padding-top: 90px;
+
+	}
+	
+}
+
+
+/* BEM */
+
+/*estilo general*/
+
+.estiloGeneral{
+	&__fondo{
+		&--color{
+			background: $backgroundGeneral;
+		}
+	}
+	&__fuente{
+		font-family: $fuente;
+	}
+	&__margen{
+		margin: 10px;
+		@media only screen and (max-width: 767px){
+		margin: 0px;
+		}
+	}
+	&__padding{
+		padding: 15px;
+	}
+}
+
+
+/*estilo footer*/
+
+.footer{
+	&__icono{
+		&--tamanio{
+			width: 25px;
+			height: 25px;
+			margin-left: 3px;
+		}
+		&--margen{
+			margin-left: 20px;
+		}
+	}
+	&__href{
+		&--fuente{
+			font-size: 15px;
+			@media only screen and (max-width: 767px){
+			font-size: 10px;
+			}
+		}
+		&--color{
+			color: $colorTexto;	
+		}
+	}
+}
+
+/* estilo contenido */
+
+.contenido{
+	&__titulo{
+		&--color{
+			color: $colorTitulo;
+			}
+		&--fuente{
+			font-size: $tamanioTituloDesktop;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: $tamanioTituloTablet;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: $tamanioTituloMobile;
+			}
+		}
+	}
+	&__subtitulo{
+		&--color{
+			color: $colorSubtitulo;
+		}
+		&--fuente{
+			font-size: $tamanioSubtituloDesktop;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: $tamanioSubtituloTablet;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: $tamanioSubtituloMobile;
+			}
+		}
+	}
+	&__imagen{
+		&--tamanio{
+			width:  60%;
+			@media only screen and (max-width: 767px){
+			width:  450%;
+			}
+		}
+	}
+	&__texto{
+		&--color{
+			color: $colorTexto;
+		}
+		&--fuente{
+			font-weight: bold;
+			font-size: $tamanioTextoDesktop;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: $tamanioTextoTablet;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: $tamanioTextoMobile;
+			}
+			
+		}
+	}
+}
+
+
+/* estilo carousel*/
+
+.carousel{
+	&__img{
+		&--tamanio{
+			height: 600px;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				height: 400px;
+			}
+			@media only screen and (max-width: 767px){
+				height: 200px;
+			}
+		}
+	}
+}
+
+
+/*estilo marca*/
+
+.marca{
+	&__h1{
+		&--color{
+			color: white;
+			background-color: yellowgreen;
+			transition: font-size, 2s;
+		}
+		&--fuente{
+			font-size: 40px;
+			font-weight: 200;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: 35px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 27px;
+			}	
+
+		}
+	}
+}
+
+h1:hover{
+	font-size: 50px;
+	@media only screen and (max-width: 767px){
+		font-size: 35px;
+	}
+}
+
+
+/*estilo Nav*/
+
+
+.nav{
+	&__img{
+		&--tamanio{
+			@media only screen and (max-width: 767px){
+				width: 50px;
+				height: 50px;
+				margin-left: 3px;
+			}
+		}
+	}
+	&__button{
+		&--border{
+			border-color: rgba(27,146,55,1)!important;
+			border-style: dotted;
+		}
+	}
+	&__ul{
+		&--fuente{
+			font-size: 20px;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: 15px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 10px;
+			}
+		}
+	}
+	&__a{
+		&--color{
+			color: $colorTexto!important;
+		}
+	}
+}
+
+/*estilo form*/
+
+.form{
+	&__input{
+		&--tamanio{
+			width:100%;
+		}
+	}
+	&__textArea{
+		&--tamanio{
+			width:100%;
+			height: 100px;
+		}
+	}
+	&__boton{
+		&--margen{
+			margin-left: 30px;
+			@media only screen and (max-width: 767px){
+				margin-left: 50px;
+				margin-bottom: 20px; 
+			}
+		}
+	}
+}
+
+
+/* estilo card */
+
+.tarjeta{
+	&__titulo{
+		&--color{
+			color: black;
+			}
+		&--fuente{
+			font-size: 20px;
+			font-weight: bold;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: 15px;
+				font-weight: bold;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 10px;
+				font-weight: bold;
+			}
+		}
+	}
+	&__imagen{
+		&--tamanio{
+			width:  100%;
+			margin-top: 20px;
+		}
+	}
+	&__texto{
+		&--color{
+			color: black;
+		}
+		&--fuente{
+			font-size: 12px;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: 11px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 10px;
+			}
+		}
+	}
+	&__borde{
+		&--color{
+			border-color: black;
+			border-style: double;
+		}
+	}
+	&__background{
+		&--color{
+			background-color: rgba(192, 0, 255, 0.14);
+		}
+	}
+	&__ubicacion{
+		justify-content: space-around;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		@media only screen and (max-width: 767px){
+			margin-top: 20px;
+			margin-left: 1px;
+			&--columna{
+				margin-bottom: 50px
+			}
+		}
+	}
+	&__lista{
+		list-style-type: none;
+	}
+}
+
+
+/* estilo mitos */
+
+.mitos{
+	&__parrafo{
+		&--color{
+			color: black;
+		}
+		&--fuente{
+			font-size: 14px;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: 12px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 10px;
+			}
+		}
+		&--lista{
+			list-style-type: none;
+		}
+
+	}
+	&__imagen{
+		&--tamanio{
+			width:  100%;
+			margin: auto;
+		}
+	}
+	&__borde{
+		&--color{
+			border-color: lightskyblue;
+			border-style: groove;
+		}
+	}
+	&__background{
+		&--color{
+			background-color: powderblue;
+		}
+	}
+	&__ubicacion{
+		margin-left: 100px;
+		margin-top: 50px;
+		@media only screen and (max-width: 767px){
+			margin-top: 20px;
+			margin-left: 1px;
+		}
+	}
+}
+
+/* estilo contacto*/
+
+.contacto{
+	&__imagen{
+		&--tamanio{
+			width:  100%;
+			margin: auto;
+		}
+	}
+	&__texto{
+		&--color{
+			color: black;
+		}
+		&--fuente{
+			font-size: 16px;
+			@media only screen and (min-width: 768px) and (max-width: 1023px){
+				font-size: 14px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 12px;
+			}
+		}
+	}
+	&__margen{
+		margin-top: 30px;
+		margin-left: 5px;
+	}
+}
