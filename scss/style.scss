@@ -108,6 +108,9 @@ $tamanioTextoMobile: 10px;
 			color: $colorTexto;	
 		}
 	}
+	&__margen{
+		margin-top: 40px;
+	}
 }
 
 /* estilo contenido */
@@ -422,5 +425,36 @@ h1:hover{
 	&__margen{
 		margin-top: 30px;
 		margin-left: 5px;
+	}
+}
+
+/* estilo producto */
+
+.producto{
+	&__imagen{
+		&--tamanio{
+			width:  60%;
+			}
+		}
+	&__boton{
+		&--color{
+			background-color: white;
+			color: black
+		}
+	}
+	@media only screen and (max-width: 767px){
+		&__subtitulo{
+			&--mostrar{
+				display: none;
+			}
+		}
+		&__texto{
+			&--tamanio{
+				font-size: 13px;
+			}
+		}
+	}
+	&__margen{
+		margin-top: 10px;
 	}
 }
