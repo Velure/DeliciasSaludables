@@ -69,6 +69,9 @@
 .footer__href--color {
   color: midnightblue; }
 
+.footer__margen {
+  margin-top: 40px; }
+
 /* estilo contenido */
 .contenido__titulo--color {
   color: darkslategray; }
@@ -291,3 +294,20 @@ h1:hover {
 .contacto__margen {
   margin-top: 30px;
   margin-left: 5px; }
+
+/* estilo producto */
+.producto__imagen--tamanio {
+  width: 60%; }
+
+.producto__boton--color {
+  background-color: white;
+  color: black; }
+
+@media only screen and (max-width: 767px) {
+  .producto__subtitulo--mostrar {
+    display: none; }
+  .producto__texto--tamanio {
+    font-size: 13px; } }
+
+.producto__margen {
+  margin-top: 10px; }
